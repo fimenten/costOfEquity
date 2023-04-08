@@ -17,11 +17,11 @@ You can install them using the following command:
 
 ## Usage
 
-To use this tool, run the `cost_of_equity.py` script with the following command:
+To use this tool, run the `costOfEquity.py` script with the following command:
 
 
 Where:
-- `<ticker>` is the ticker symbol for the stock you want to calculate the cost of equity for. For example, `4563.T` for Toyota Motor Corporation.
+- `<ticker>` is the ticker symbol for the stock you want to calculate the cost of equity for. For example, `4563.T` for アンジェス.
 - `<premium>` is the premium for the stock, in percent.
 - `--yfinance` is an optional flag that tells the script to use the `yfinance` library to retrieve the data. It is set to `True` by default.
 - `--beta <beta_value>` is an optional argument that specifies the beta value for the stock, if you don't want to use the default value retrieved from `yfinance`.
@@ -30,7 +30,7 @@ Where:
 
 ## Example
 
-`python cost_of_equity.py 4563.T 0.1`
+`python costOfEquity.py 4563.T 0.1`
 
 
 This command calculates the cost of equity for 4563.T. and RiskPremium 0.1
