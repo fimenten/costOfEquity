@@ -23,7 +23,7 @@ def get_ticker_df(ticker,days = 365):
     # end = datetime.datetime.now()
     # df = yfinance.download(tickers=[ticker],start = start,progress=False)
     ticker = yfinance.Ticker(ticker)
-    ret = ticker.history("1y",back_adjust=True,)
+    ret = ticker.history("1y",back_adjust=True,debug=False)
     ret = ret.set_index(ret.index.values)
     return ((ret["Close"] - ret["Close"].shift())/ret["Close"].shift()).fillna(0)
 
@@ -75,7 +75,7 @@ def main():
         
     cost_of_equity = float(risk_free_rate) + float(beta) *  float(args.premium)
     
-    print(cost_of_equity)
+    print(cost_of_equity,end="")
     
     
 if __name__ =="__main__":
